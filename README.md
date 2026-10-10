@@ -153,3 +153,4 @@ Unit tests mock SMTP and the service-to-service HTTP call, so no real email is s
 - Structured (JSON) logs with request IDs propagated between services
 - Containerization (Docker Compose) for one-command startup
 # microservice-email
+# microservice-email
