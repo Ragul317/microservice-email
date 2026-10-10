@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Send Email</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Send Email</h1>
+    <p class="subtitle">Frontend → Main Backend → Email Microservice → SMTP</p>
+
+    <form id="email-form" novalidate>
+      <div class="field">
+        <label for="to">To</label>
+        <input id="to" name="to" type="email" placeholder="customer@example.com" autocomplete="email" required>
+        <p class="field-error" id="to-error" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" placeholder="Test Email" maxlength="200" required>
+        <p class="field-error" id="subject-error" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="7" placeholder="Hello from my microservice application" maxlength="10000" required></textarea>
+        <p class="field-error" id="message-error" aria-live="polite"></p>
+      </div>
+
+      <button id="send-button" type="submit">
+        <span class="spinner" aria-hidden="true"></span>
+        <span class="label">Send Email</span>
+      </button>
+    </form>
+
+    <div id="result" class="result" role="status" aria-live="polite" hidden></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
